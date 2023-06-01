@@ -15,7 +15,9 @@ header {
 .top-header-register {
     display: flex;
     flex-wrap: wrap;
-    margin: 10px;
+    padding: 5%;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .buscador1 {
@@ -68,6 +70,7 @@ header nav ul {
     display: flex;
     justify-content: space-around;
     width: 30%;
+    margin: 10px;
 
 }
 
@@ -261,7 +264,7 @@ div.selecciones {
     color: white;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 769px) {
     .top-header-register {
         display: flex;
         flex-wrap: wrap;
@@ -296,7 +299,7 @@ div.selecciones {
     }
 }
 
-@media (min-width: 625px) {
+@media (min-width: 1279px) {
     .top-header-register {
         display: flex;
         align-items: center;

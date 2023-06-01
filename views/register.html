@@ -62,97 +62,79 @@
     <main id="formulario-registro">
         <form class="formularios" action="/" method="GET">
 
-            <div>
-                <input class="text-field" type="text" name="nombreCompleto" placeholder="Nombre y apellido">
-            </div>
+            <input class="text-field" type="text" name="nombreCompleto" placeholder="Nombre y apellido">
 
-            <div>
-                <input class="text-field" type="text" name="usuario" placeholder="Nombre de usuario">
-            </div>
+            <input class="text-field" type="text" name="usuario" placeholder="Nombre de usuario">
 
-            <div>
-                <label for="nacimiento">Fecha de nacimiento</label>
-                <input type="date" name="nacimiento" id="nacimiento">
-            </div>
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" name="nacimiento" id="nacimiento">
 
-            <div>
-                <input class="text-field" type="email" placeholder="E-mail">
-            </div>
+            <input class="text-field" type="email" placeholder="E-mail">
 
-            <div>
-                <input class="text-field" type="text" name="domicilio" placeholder="Calle falsa 123">
-            </div>
+            <input class="text-field" type="text" name="domicilio" placeholder="Calle falsa 123">
+
             <h3>Tipo de perfil</h3>
-            <div class="selecciones">
-                <div>
-                    <input type="radio" name="perfil" value="cendedor" id="cendedor">
-                    <label for="cendedor">Vendedor</label>
-                </div>
-                <div>
-                    <input type="radio" name="perfil" value="comprador" id="comprador">
-                    <label for="cendedor">Comprador</label>
-                </div>
-            </div>
+
+            <input type="radio" name="perfil" value="cendedor" id="cendedor">
+            <label for="cendedor">Vendedor</label>
+
+            <input type="radio" name="perfil" value="comprador" id="comprador">
+            <label for="cendedor">Comprador</label>
+
             <h3>Intereses</h3>
-            <div class="selecciones">
-                <input type="checkbox" name="interes" value="electro" id="electro">
-                <label for="electro">Electro</label>
-                <input type="checkbox" name="interes" value="moda" id="moda">
-                <label for="moda">Moda</label>
-                <input type="checkbox" name="interes" value="jugueteria" id="jugueteria">
-                <label for="jugueteria">Jugueteria</label>
-                <input type="checkbox" name="interes" value="vidaSana" id="vidaSana">
-                <label for="vidaSana">Vida Sana</label>
-            </div>
 
-            <div>
-                <label for="fotoPerfil">Foto de perfil</label>
-                <input type="file" name="fotoPerfil" id="fotoPerfil">
-            </div>
+            <input type="checkbox" name="interes" value="electro" id="electro">
+            <label for="electro">Electro</label>
 
-            <div>
-                <input class="text-field" type="password" name="contrasena" id="contrasena">
-                <input class="text-field" type="password" name="contrasenaConfirmar" id="contrasenaConfirmar">
-            </div>
+            <input type="checkbox" name="interes" value="moda" id="moda">
+            <label for="moda">Moda</label>
+            <input type="checkbox" name="interes" value="jugueteria" id="jugueteria">
 
-            <div>
-                <button class="botonForm botonSubmit" type="submit">Enviar</button>
-                <button class="botonForm botonReset" type="reset">Cancelar</button>
-            </div>
+            <label for="jugueteria">Jugueteria</label>
+            <input type="checkbox" name="interes" value="vidaSana" id="vidaSana">
+            <label for="vidaSana">Vida Sana</label>
 
+            <label for="fotoPerfil">Foto de perfil</label>
+            <input type="file" name="fotoPerfil" id="fotoPerfil">
+
+            <input class="text-field" type="password" name="contrasena" id="contrasena">
+            <input class="text-field" type="password" name="contrasenaConfirmar" id="contrasenaConfirmar">
+
+            <button class="botonForm botonSubmit" type="submit">Enviar</button>
+            <button class="botonForm botonReset" type="reset">Cancelar</button>
         </form>
     </main>
     <footer>
         <div class="mainFooter">
             <div>
-              <i class="fa-solid fa-credit-card"></i>
-              <h3>Pagá con tarjeta o en efectivo</h3>
-              <p>
-                Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
-                efectivo enpuntos de pago. ¡Y siempre es seguro!
-              </p>
+                <i class="fa-solid fa-credit-card"></i>
+                <h3>Pagá con tarjeta o en efectivo</h3>
+                <p>
+                    Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
+                    efectivo enpuntos de pago. ¡Y siempre es seguro!
+                </p>
             </div>
             <div>
-              <i class="fa-solid fa-gift"></i>
-              <h3>Envío gratis desde $ 2.500</h3>
-              <p>
-                Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en
-                miles de productos. Es un beneficio de Mercado Puntos.
-              </p>
+                <i class="fa-solid fa-gift"></i>
+                <h3>Envío gratis desde $ 2.500</h3>
+                <p>
+                    Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en
+                    miles de productos. Es un beneficio de Mercado Puntos.
+                </p>
             </div>
             <div>
-              <i class="fa-solid fa-user-shield"></i>
-              <h3>Seguridad, de principio a fin</h3>
-              <p>
-                ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no
-                puedas hacer, porque estás siempre protegid@.
-              </p>
+                <i class="fa-solid fa-user-shield"></i>
+                <h3>Seguridad, de principio a fin</h3>
+                <p>
+                    ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no
+                    puedas hacer, porque estás siempre protegid@.
+                </p>
             </div>
-          </div>
-          <div class="derechos">
+        </div>
+        <div class="derechos">
             <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
-          </div>
-        </footer>
+        </div>
+    </footer>
     </footer>
 </body>
 
