@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include("./partials/head") %>
+
+<body>
+
+    <% include(".parcials/header") %>
+
+    <main id="formulario-registro">
+        <form class="formularios" action="/" method="get">
+
+            <div>
+                <input class="text-field" type="text" name="usuario" placeholder="Usuario" />
+            </div>
+
+            <div>
+                <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña" />
+            </div>
+
+            <div class="confirmar">
+                <button class="botonForm botonLogin" type="submit">Iniciar Sesion</button>
+            </div>
+        </form>
+    </main>
+    
+    <% include("./partials/footer") %>
+
+</body>
+
+</html>
