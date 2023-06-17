@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<% include("./partials/head") %>
+<%- include("partials/head") %>
 
-<body>
+    <body>
 
-    <% include(".parcials/header") %>
+        <%- include("partials/header") %>
 
-    <main id="formulario-registro">
-        <form class="formularios" action="/" method="get">
+            <main id="formulario-registro">
+                <form class="formularios" action="/" method="get">
 
-            <div>
-                <input class="text-field" type="text" name="usuario" placeholder="Usuario" />
-            </div>
+                    <div>
+                        <input class="text-field" type="text" name="usuario" placeholder="Usuario" />
+                    </div>
 
-            <div>
-                <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña" />
-            </div>
+                    <div>
+                        <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña" />
+                    </div>
 
-            <div class="confirmar">
-                <button class="botonForm botonLogin" type="submit">Iniciar Sesion</button>
-            </div>
-        </form>
-    </main>
-    
-    <% include("./partials/footer") %>
+                    <div class="confirmar">
+                        <button class="botonForm botonLogin" type="submit">Iniciar Sesion</button>
+                    </div>
+                </form>
+            </main>
 
-</body>
+            <%- include("partials/footer") %>
+
+    </body>
 
 </html>

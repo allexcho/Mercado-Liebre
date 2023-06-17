@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path")
-const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/productos.json")));
+const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/user.json")));
 
-const mainController = {
+const userController = {
     home: (req, res) => {
         return res.render("home");
     },
@@ -14,4 +14,4 @@ const mainController = {
     }
 }
 
-module.exports = mainController
+module.exports = userController
