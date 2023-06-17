@@ -11,6 +11,20 @@ const userController = {
     },
     login: (req, res) => {
         return res.render("login");
+    },
+    processRegister: (req, res) => {
+        const user = {
+        "id": 1,
+        "name": "alex",
+        "username": "allexcho",
+        "birthday": "13/02/1998",
+        "email": "allexcho98@gmail.com",
+        "street": "avellaneda 3268",
+        "status": "comprador",
+        "interests": "moda",
+        "image": "",
+        "password": "1234"
+        }
     }
 }
 
