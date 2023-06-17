@@ -11,15 +11,15 @@ const port = process.env.PORT || 3030;
 app.listen(port, () => console.log('Servidor corriendo en el puerto ${port}'));
 
 app.get("/", (req, res) => {
-        res.sendFile(path.join(__dirname, "/views/home.html"))
+        res.sendFile(path.join(__dirname, "/views/home.ejs"))
 })
 
 app.get("/register", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/register.html"))
+    res.sendFile(path.join(__dirname, "/views/register.ejs"))
 })
 
 app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/login.html"))
+    res.sendFile(path.join(__dirname, "/views/login.ejs"))
 })
 
 app.use(mainRouter);
