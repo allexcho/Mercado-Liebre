@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path")
+
 const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/user.json")));
 
 const userController = {
@@ -14,18 +15,20 @@ const userController = {
     },
     processRegister: (req, res) => {
         const user = {
-        "id": 1,
-        "name": "alex",
-        "username": "allexcho",
-        "birthday": "13/02/1998",
-        "email": "allexcho98@gmail.com",
-        "street": "avellaneda 3268",
-        "status": "comprador",
-        "interests": "moda",
-        "image": "",
-        "password": "1234"
+            "id": datos.length + 1,
+            "name": req.body['nombre completo'],
+            "username": req.body.usuario,
+            "fechaDeNacimiento": req.body.nacimiento,
+            "email": req.body.email,
+            "domicilio": req.body.domicilio,
+            "tipoDePerfil": req.body.perfil,
+            "intereses": req.body.interes,
+            "image": req.body.Fotoperfil,
+            "password": req.body.password
         }
+        fs.writeFileSync(path.resolve(__dirname, '../database/user.json'), JSON.stringify([...datos, user], null, 2));
+        return res.redirect('/')
     }
 }
 
-module.exports = userController
+module.exports = userController;
