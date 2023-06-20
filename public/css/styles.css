@@ -101,7 +101,7 @@
     padding-bottom: 10px;
     display: none;
   }
-  
+
   .banner-img {
     width: 100vw;
   }
@@ -130,7 +130,7 @@
   footer div h5 {
     font-size: 16px;
   }
- 
+
   main section h3 {
     font-size: 24px;
     color: #666;
@@ -352,6 +352,10 @@
     .desc-prod {
       font-size: 18px;
     }
+
+    .productos article {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
   
     main section article {
       width: 22.5%;
@@ -421,7 +425,7 @@
     }
   
     footer i:hover {
-      color: #EAC926;
+      color: #4682B4;
     }
   
     footer div {

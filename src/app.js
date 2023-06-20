@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mainRoutes = require('./routes/mainRouter');
+const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
 const methodOverride = require('method-override');
 
@@ -19,5 +19,5 @@ app.listen(3000, () => {
     console.log('servidor corriendo en el puerto 3000');
 });
 
-app.use(mainRoutes);
+app.use(mainRouter);
 app.use('/user', userRouter);
