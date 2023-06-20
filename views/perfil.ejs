@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('partials /head')%>
+
+    <body>
+
+        <%-include('partials /header')%>
+
+            <main class="formulario-registro">
+                <h1>
+                    <%= usuario.name %>
+                </h1>
+                <img src="/img/<%= usuario.image %>" alt="<%= usuario.name %>">
+
+                <a href="/editar/<%= usuario.id %>">Editar</a>
+
+                <form action="/user/eliminar/<%= usuario.id%>?_method=DELETE" method="post">
+                    <button>Eliminar</button>
+                </form>
+            </main>
+
+            <%-include('partials /footer')%>
+
+    </body>
+
+</html>

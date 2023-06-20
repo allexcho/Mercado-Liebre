@@ -1,14 +1,16 @@
 [
     {
         "id": 1,
-        "name": "",
-        "username": "",
-        "birthday": "",
-        "email": "",
-        "street": "",
-        "status": "",
-        "interests": "",
+        "name": "alex",
+        "username": "allexcho",
+        "fechaDeNacimiento": "1998-02-13",
+        "email": "allexcho79@gmail.com",
+        "domicilio": "gaona 4866",
+        "tipoDePerfil": "Vendedor",
+        "intereses": "moda",
         "image": "",
-        "password": ""
+        "password": "",
+        "borrado": true,
+        "PasswordConfirm": ""
     }
 ]

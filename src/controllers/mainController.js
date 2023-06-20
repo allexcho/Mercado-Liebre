@@ -8,12 +8,6 @@ const mainController = {
         const visitados = datos.filter((row) => row.category == 'visited');
         const ofertas = datos.filter((row) => row.category == 'in-sale');
         return res.render('home', { visitado: visitados, oferta: ofertas });
-    },
-    register: (req, res) => {
-        return res.render("register");
-    },
-    login: (req, res) => {
-        return res.render("login");
     }
 }
 

@@ -115,22 +115,22 @@
   }
   
   footer i {
-    font-size: 2em;
+    font-size: 35px;
     color: #1259c3;
     margin-bottom: 10px;
     transition: color 500ms;
   }
-  
+
   footer div p {
     max-width: 70vw;
     text-align: center;
-  }
-  
-  main {
-    width: 90vw;
-    margin: 0 auto;
+    font-size: 12px;
   }
 
+  footer div h5 {
+    font-size: 16px;
+  }
+ 
   main section h3 {
     font-size: 24px;
     color: #666;
@@ -332,12 +332,6 @@
     }
   }
   
-  @media (min-width: 400px) {
-    .descuento {
-      text-align: center;
-    }
-  }
-  
   @media (min-width: 769px) {
     body {
       font-size: 14px;
@@ -435,8 +429,8 @@
       width: 30vw;
     }
   
-    footer h5 {
-      font-size: 14px;
+    footer div h5 {
+      font-size: 17px;
     }
   
     .top-header {

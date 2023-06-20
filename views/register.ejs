@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("partials/head") %>
+<%-include('partials /head')%>
 
   <body>
 
-    <%- include("partials/header") %>
+    <%-include('partials /header')%>
 
-      <main id="formulario-registro">
-        <form class="formularios" action="/" method="get">
+      <main class="formulario-registro">
+
+        <form class="formularios" action="/user/register" method="post">
           <div>
-            <input class="text-field" type="text" name="nombre" placeholder="Nombre y Apellido"/>
+            <input class="text-field" type="text" placeholder="Nombre y apellido" name="nombre completo" id="name">
           </div>
           <div>
-            <input class="text-field" type="text" name="usuario" placeholder="Usuario"/>
+            <input class="text-field" type="text" placeholder="Nombre De Usuario" name="usuario" id="surname">
+          </div>
+          <div>
+            <label for="nacimiento">Fecha de Nacimiento</label>
+            <input type="date" name="nacimiento" id="nacimiento">
+          </div>
+          <div>
+            <input class="text-field" type="email" placeholder="Email" name="email" id="">
+
           </div>
 
           <div>
-            <input class="text-field" type="email" name="email" placeholder="E-mail"/>
-          </div>
-          <h3 for="Nacimiento">Fecha de Nacimiento</h3>
-          <div>
-            <input type="date" id="nacimiento" name="nacimiento"/>
-          </div>
-          <div>
-            <input class="text-field" type="text" name="domicilio" placeholder="Domicilio"/>
+            <input class="text-field" type="text" placeholder="Domicilio" name="domicilio" id="">
           </div>
           <h3>Tipo de perfil</h3>
-          <div class="selecciones">
+          <div class="perfil">
             <div>
-              <input type="radio" name="perfil" id="comprador" value="comprador"/>
-              <label for="comprador">Comprador</label>
-            </div>
-            <div>
-              <input type="radio" name="perfil" id="vendedor" value="vendedor"/>
+              <input type="radio" name="perfil" id="vendedor" value="Vendedor">
               <label for="vendedor">Vendedor</label>
             </div>
+            <div>
+              <input type="radio" name="perfil" id="comprador" value="Comprador">
+              <label for="comprador">Comprador</label>
+            </div>
+
           </div>
           <h3>Intereses</h3>
           <div class="selecciones">
             <div>
-              <input type="checkbox" name="interes" id="electro" value="electro"/>
+              <input type="checkbox" name="interes" value="Electro" id="moda">
               <label for="electro">Electro</label>
             </div>
             <div>
-              <input type="checkbox" name="interes" id="moda" value="moda"/>
+              <input type="checkbox" name="interes" value="Moda" id="moda">
               <label for="moda">Moda</label>
             </div>
             <div>
-              <input type="checkbox" name="interes" id="hogar" value="hogar"/>
+              <input type="checkbox" name="interes" value="Hogar" id="hogar">
               <label for="hogar">Hogar</label>
             </div>
             <div>
-              <input type="checkbox" name="interes" id="Jugueteria" value="Jugueteria"/>
-              <label for="Jugueteria">Jugueteria</label>
+              <input type="checkbox" name="interes" value="jugueteria" id="jugueteria">
+              <label for="jugueteria">jugueteria</label>
             </div>
             <div>
-              <input type="checkbox" name="interes" id="vidaSana" value="vidaSana"/>
-              <label for="vidaSana">Vida Sana</label>
+              <input type="checkbox" name="interes" value="Vida Sana" id="vida sana">
+              <label for="vida sana">Vida Sana</label>
             </div>
           </div>
-          <label class="foto-perfil">
-            <input type="file"/>
-            <i class="fa fa-cloud-upload"></i> Foto de perfil
-          </label>
           <div>
-            <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña"/>
+            <label for="fotoPerfil">Foto de usuario</label>
+            <input type="file" name="Fotoperfil" id="fotoPerfil">
           </div>
           <div>
-            <input class="text-field" type="password" name="contraseniaConfirmar" placeholder="Confirmar contraseña"/>
+            <input class="text-field" type="password" placeholder="Password" name="password" id="password">
           </div>
-          <div class="confirmar">
-            <button class="botonForm botonSubmit" type="submit">Enviar</button>
-            <button class="botonForm botonReset" type="reset">Cancelar</button>
+          <div>
+            <input class="text-field" type="password" placeholder="PasswordConfirm" name="PasswordConfirm"
+              id="PasswordConfirm">
+
           </div>
+          <button class="botonForm botonSubmit" type="submit">Enviar</button>
+          <button class="botonForm botonReset" type="reset">Cancelar</button>
+
         </form>
+
       </main>
 
-      <%- include("partials/footer") %>
+      <%-include('partials /footer')%>
 
   </body>
 
