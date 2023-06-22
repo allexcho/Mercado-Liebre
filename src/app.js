@@ -4,6 +4,7 @@ const path = require('path');
 const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
 const methodOverride = require('method-override');
+const logs = require("./middleware/logs")
 
 app.use(express.static('public'));
 
@@ -11,6 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(methodOverride('_method'));
+app.use(logs)
 
 app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs");

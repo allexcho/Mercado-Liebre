@@ -8,7 +8,7 @@
         <%-include('./partials/header')%>
 
             <main class="formulario-registro">
-                <img src="/img/<%= usuario.image%>" alt="">
+                <img src="/image/<%= usuario.image%>" alt="">
                 <form class="formularios" action="/user/editar/<%= usuario.id %>?_method=PUT" method="post"
                     enctype="multipart/form-data">
                     <div>
