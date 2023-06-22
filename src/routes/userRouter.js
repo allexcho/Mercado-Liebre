@@ -1,16 +1,18 @@
 const express = require('express');
-const router  = express.Router();
+const router = express.Router();
 const userController = require('../controllers/userController');
 const multer = require('multer');
 const path = require('path');
 
 const logMiddleware = require("../middleware/logMiddleware")
 
-const multerDiskStorage = multer.diskStorage({ 
-    destination: (req,file,cb) => {
+const registerValidation = require('../middleware/registerValidation');
+
+const multerDiskStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
         cb(null, path.resolve(__dirname, '../../public/img'))
     },
-    filename: (req,file,cb) => {
+    filename: (req, file, cb) => {
         let imageName = Date.now() + path.extname(file.originalname);
         cb(null, imageName);
     }
@@ -22,7 +24,7 @@ const fileUpload = multer({
 
 router.get('/login', userController.login);
 router.get('/register', userController.register);
-router.post('/register', userController.processRegister)
+router.post('/register', registerValidation, userController.processRegister)
 
 // Edicion de usuario 
 router.get('/editar/:id', userController.editar);

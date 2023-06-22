@@ -1,100 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%-include('./partials/head')%>
 
-<%-include('./partials/head')%>
+  <body>
+    <%-include('./partials/header')%>
 
-    <body>
+    <main class="formulario-registro">
+      <img src="/image/<%= usuario.image%>" alt="" />
+      <form
+        class="formularios"
+        action="/user/editar/<%= usuario.id %>?_method=PUT"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div>
+          <input
+            class="text-field"
+            type="text"
+            placeholder="Nombre y apellido"
+            name="name"
+            id="name"
+            value="<%= usuario.name %>"
+          />
+        </div>
+        <div>
+          <input
+            class="text-field"
+            type="text"
+            placeholder="Nombre De Usuario"
+            name="username"
+            id="surname"
+            value="<%= usuario.username %>"
+          />
+        </div>
+        <div>
+          <label for="nacimiento">Fecha de Nacimiento</label>
+          <input
+            type="date"
+            name="fechaDeNacimiento"
+            id="nacimiento"
+            value="<%= usuario.nacimiento %>"
+          />
+        </div>
+        <div>
+          <input
+            class="text-field"
+            type="email"
+            placeholder="Email"
+            name="email"
+            id=""
+            value="<%= usuario.email %>"
+          />
+        </div>
 
-        <%-include('./partials/header')%>
+        <div>
+          <input
+            class="text-field"
+            type="text"
+            placeholder="Domicilio"
+            name="domicilio"
+            id=""
+            value="<%= usuario.domicilio %>"
+          />
+        </div>
+        <h3>Tipo de perfil</h3>
+        <div class="perfil">
+          <div>
+            <input <%=usuario.tipoDePerfil=="vendedor" ? "checked" : "" %>
+            type="radio" name="tipoDePerfil" id="vendedor" value="Vendedor">
+            <label for="vendedor">Vendedor</label>
+          </div>
+          <div>
+            <input <%=usuario.tipoDePerfil=="comprador" ? "checked" : "" %>
+            type="radio" name="tipoDePerfil" id="comprador" value="Comprador">
+            <label for="comprador">Comprador</label>
+          </div>
+        </div>
+        <h3>Intereses</h3>
+        <div class="selecciones">
+          <div>
+            <input <%=usuario.intereses.includes('Electro')==true ? "checked" :
+            '' %> type="checkbox" name="intereses" value="Electro" id="moda">
+            <label for="electro">Electro</label>
+          </div>
+          <div>
+            <input <%=usuario.intereses.includes('Moda')==true ? "checked" : ''
+            %> type="checkbox" name="intereses" value="Moda" id="moda">
+            <label for="moda">Moda</label>
+          </div>
+          <div>
+            <input <%=usuario.intereses.includes('Hogar')==true ? "checked" : ''
+            %> type="checkbox" name="intereses" value="Hogar" id="hogar">
+            <label for="hogar">Hogar</label>
+          </div>
+          <div>
+            <input <%=usuario.intereses.includes('jugueteria')==true ? "checked"
+            : '' %> type="checkbox" name="intereses" value="jugueteria"
+            id="jugueteria">
+            <label for="jugueteria">jugueteria</label>
+          </div>
+          <div>
+            <input <%=usuario.intereses.includes('Vida Sana')==true ? "checked"
+            : '' %> type="checkbox" name="intereses" value="Vida Sana" id="vida
+            sana">
+            <label for="vida sana">Vida Sana</label>
+          </div>
+        </div>
+        <div>
+          <label for="fotoPerfil">Foto de usuario</label>
+          <input type="file" name="image" id="fotoPerfil" />
+        </div>
+        <div>
+          <input
+            class="text-field"
+            type="password"
+            placeholder="Password"
+            name="password"
+            id="password"
+          />
+        </div>
+        <div>
+          <input
+            class="text-field"
+            type="password"
+            placeholder="PasswordConfirm"
+            name="PasswordConfirm"
+            id="PasswordConfirm"
+          />
+        </div>
+        <button class="botonForm botonSubmit" type="submit">Enviar</button>
+        <button class="botonForm botonReset" type="reset">Cancelar</button>
+      </form>
+    </main>
 
-            <main class="formulario-registro">
-                <img src="/image/<%= usuario.image%>" alt="">
-                <form class="formularios" action="/user/editar/<%= usuario.id %>?_method=PUT" method="post"
-                    enctype="multipart/form-data">
-                    <div>
-                        <input class="text-field" type="text" placeholder="Nombre y apellido" name="name" id="name"
-                            value="<%= usuario.name %>">
-                    </div>
-                    <div>
-                        <input class="text-field" type="text" placeholder="Nombre De Usuario" name="username"
-                            id="surname" value="<%= usuario.username %>">
-                    </div>
-                    <div>
-                        <label for="nacimiento">Fecha de Nacimiento</label>
-                        <input type="date" name="fechaDeNacimiento" id="nacimiento" value="<%= usuario.nacimiento %>">
-                    </div>
-                    <div>
-                        <input class="text-field" type="email" placeholder="Email" name="email" id=""
-                            value="<%= usuario.email %>">
-
-                    </div>
-
-                    <div>
-                        <input class="text-field" type="text" placeholder="Domicilio" name="domicilio" id=""
-                            value="<%= usuario.domicilio %>">
-                    </div>
-                    <h3>Tipo de perfil</h3>
-                    <div class="perfil">
-                        <div>
-                            <input <%=usuario.tipoDePerfil=="vendedor" ? "checked" : "" %> type="radio"
-                            name="tipoDePerfil" id="vendedor" value="Vendedor">
-                            <label for="vendedor">Vendedor</label>
-                        </div>
-                        <div>
-                            <input <%=usuario.tipoDePerfil=="comprador" ? "checked" : "" %> type="radio"
-                            name="tipoDePerfil" id="comprador" value="Comprador">
-                            <label for="comprador">Comprador</label>
-                        </div>
-
-                    </div>
-                    <h3>Intereses</h3>
-                    <div class="selecciones">
-                        <div>
-                            <input <%=usuario.intereses.includes('Electro')==true ? "checked" : '' %> type="checkbox"
-                            name="intereses" value="Electro" id="moda">
-                            <label for="electro">Electro</label>
-                        </div>
-                        <div>
-                            <input <%=usuario.intereses.includes('Moda')==true ? "checked" : '' %> type="checkbox"
-                            name="intereses" value="Moda" id="moda">
-                            <label for="moda">Moda</label>
-                        </div>
-                        <div>
-                            <input <%=usuario.intereses.includes('Hogar')==true ? "checked" : '' %> type="checkbox"
-                            name="intereses" value="Hogar" id="hogar">
-                            <label for="hogar">Hogar</label>
-                        </div>
-                        <div>
-                            <input <%=usuario.intereses.includes('jugueteria')==true ? "checked" : '' %> type="checkbox"
-                            name="intereses" value="jugueteria" id="jugueteria">
-                            <label for="jugueteria">jugueteria</label>
-                        </div>
-                        <div>
-                            <input <%=usuario.intereses.includes('Vida Sana')==true ? "checked" : '' %> type="checkbox"
-                            name="intereses" value="Vida Sana" id="vida sana">
-                            <label for="vida sana">Vida Sana</label>
-                        </div>
-                    </div>
-                    <div>
-                        <label for="fotoPerfil">Foto de usuario</label>
-                        <input type="file" name="image" id="fotoPerfil">
-                    </div>
-                    <div>
-                        <input class="text-field" type="password" placeholder="Password" name="password" id="password">
-                    </div>
-                    <div>
-                        <input class="text-field" type="password" placeholder="PasswordConfirm" name="PasswordConfirm"
-                            id="PasswordConfirm">
-                    </div>
-                    <button class="botonForm botonSubmit" type="submit">Enviar</button>
-                    <button class="botonForm botonReset" type="reset">Cancelar</button>
-
-                </form>
-
-            </main>
-
-            <%-include('./partials/footer')%>
-
-    </body>
-
+    <%-include('./partials/footer')%>
+  </body>
 </html>
