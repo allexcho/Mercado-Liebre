@@ -10,7 +10,7 @@ const userController = {
         return res.render('login');
     },
     processLogin: (req, res) => {
-        
+        const usuario = datos.find((row) => row.email == req.body.email);
     },
     register: (req, res) => {
         return res.render('register');
