@@ -5,9 +5,13 @@ const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
 const methodOverride = require('method-override');
 const logs = require("./middleware/logs")
+const session = require("express-session")
 
 app.use(express.static('public'));
 
+app.use(express({
+    secret: "secret"
+}))
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
