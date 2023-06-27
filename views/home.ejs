@@ -3,59 +3,69 @@
 
 <%- include('./partials/head') %>
 
-<body>
-  <header>
-    
-    <%-include('./partials/header')%>
+    <body>
+        <header>
 
-  </header>
-  <section>
-    <img class="banner-img" src="/image/img-home-banner.jpg" alt="Banner">
-</section>
+            <%-include('. /partials/header')%>
+
+        </header>
+        <section>
+            <img class="banner-img" src="/image/img-home-banner.jpg" alt="Banner">
+        </section>
 
 
-<main>
+        <main>
 
-    <section>
-        <h3>Basado en tu ultima visita</h3>
-        <div class="productos">
-            <% visitado.forEach((row) => {  %>
-            <article> 
-                <img src="/image/<%= row.image %>" alt="<%= row.image %>">
-                <div class="info-article">
-                    <i class="fas fa-truck"></i>
-                    <p class="precio"> $ <%= row.price %></p>
-                    <p class="descuento"><%= row.discount %>% OFF</p>
-                    <h4 class="desc-prod"><%= row.name %></h4>
+            <section>
+                <h3>Basado en tu ultima visita</h3>
+                <div class="productos">
+                    <% visitado.forEach((row)=> { %>
+                        <article>
+                            <img src="/image/<%= row.image %>" alt="<%= row.image %>">
+                            <div class="info-article">
+                                <i class="fas fa-truck"></i>
+                                <p class="precio"> $ <%= row.price %>
+                                </p>
+                                <p class="descuento">
+                                    <%= row.discount %>% OFF
+                                </p>
+                                <h4 class="desc-prod">
+                                    <%= row.name %>
+                                </h4>
+                            </div>
+                        </article>
+                        <% }) %>
                 </div>
-            </article>
-            <% }) %>
-        </div>
-    </section>
-    <section>
-        <h3>Ofertas</h3>
-        <div class="productos">
-            <% oferta.forEach((row) => {  %>
-                <article> 
-                    <img src="/image/<%= row.image %>" alt="<%= row.image %>">
-                    <div class="info-article">
-                        <i class="fas fa-truck"></i>
-                        <p class="precio"> $ <%= row.price %></p>
-                        <p class="descuento"><%= row.discount %>% OFF</p>
-                        <h4 class="desc-prod"><%= row.name %></h4>
-                    </div>
-                </article>
-                <% }) %>
-        </div>
-    </section>
+            </section>
+            <section>
+                <h3>Ofertas</h3>
+                <div class="productos">
+                    <% oferta.forEach((row)=> { %>
+                        <article>
+                            <img src="/image/<%= row.image %>" alt="<%= row.image %>">
+                            <div class="info-article">
+                                <i class="fas fa-truck"></i>
+                                <p class="precio"> $ <%= row.price %>
+                                </p>
+                                <p class="descuento">
+                                    <%= row.discount %>% OFF
+                                </p>
+                                <h4 class="desc-prod">
+                                    <%= row.name %>
+                                </h4>
+                            </div>
+                        </article>
+                        <% }) %>
+                </div>
+            </section>
 
-</main>
-  </main>
-  <footer>
-    
-    <%- include('./partials/footer') %>
+        </main>
+        </main>
+        <footer>
 
-  </footer>
-</body>
+            <%- include('./partials/footer') %>
+
+        </footer>
+    </body>
 
 </html>

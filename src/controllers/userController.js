@@ -11,6 +11,32 @@ const userController = {
     },
     processLogin: (req, res) => {
         const usuario = datos.find((row) => row.email == req.body.email);
+        if (usuario) {
+            if (usuario.password == req, body.password) {
+                delete usuario.password
+                req.session.usuarioLogueado = usuario
+                if (req.body.cookie) {
+                    res.cookie("RECORDAME", usuario.email, { maxAge: 1000 * 60 * 60 })
+                }
+                return req.redirect("/user/perfil")
+            } else {
+                return res.render("/login", {
+                    errors: {
+                        datosMal: {
+                            msg: "Datos Incorrectos"
+                        }
+                    }
+                });
+            }
+        } else {
+            return res.render("/login", {
+                errors: {
+                    datosMal: {
+                        msg: "Datos Incorrectos"
+                    }
+                }
+            });
+        }
     },
     register: (req, res) => {
         return res.render('register');
@@ -30,9 +56,9 @@ const userController = {
         }
 
         const rdoValidation = validationResult(req)
-        console.log(rdoValidation.errors);
-        if (rdoValidation.errors.length > 0) {
-            return res.render("register", { errors: rdoValidation.mapped(), oldData: req.body })
+        console.log(rdoValidation.errorss);
+        if (rdoValidation.errorss.length > 0) {
+            return res.render("register", { errorss: rdoValidation.mapped(), oldData: req.body })
         }
 
         fs.writeFileSync(path.resolve(__dirname, '../database/user.json'), JSON.stringify([...datos, user], null, 2));
@@ -52,7 +78,7 @@ const userController = {
 
     },
     perfil: (req, res) => {
-        const usuario = datos.find((row) => row.id == req.params.id);
+        const usuario = req.session.usuarioLogueado;
         console.log(usuario)
         return res.render('perfil', { usuario: usuario });
     },

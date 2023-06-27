@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head') %>
+<%- include('./partials/head') %>
 
   <body>
-    <%-include('./partials/header')%>
+    <%-include('. /partials/header')%>
 
-    <main class="formulario-registro">
-      <form action="/" method="get" class="formularios form-login">
-        <div>
-          <input
-            type="text"
-            class="text-field"
-            placeholder="email"
-            name="email"
-            id="email"
-          />
-        </div>
-        <div>
-          <input
-            class="text-field"
-            type="password"
-            placeholder="Elegi tu constrasena"
-            name="password"
-            id="password"
-          />
-        </div>
-        <button class="botonForm botonSubmit" type="submit">Login</button>
-      </form>
-    </main>
+      <main class="formulario-registro">
+        <form action="/user/login" method="post" class="formularios form-login">
+          <div>
+            <input type="text" class="text-field" placeholder="email" name="email" id="email" />
+          </div>
+          <div>
+            <input class="text-field" type="password" placeholder="Elegi tu constrasena" name="password"
+              id="password" />
+          </div>
+          <div>
+            <label for="cookie">Recordarme</label>
+            <input class="" type="checkbox" name="cookie" id="cookie">
+          </div>
+          <% if(locals.errors && errors.datoMal) { %>
+            <p>
+              <%= errors.datoMal.msg %>
+            </p>
+            <% } %>
+              <button class="botonForm botonSubmit" type="submit">Login</button>
+        </form>
+      </main>
 
-    <%- include('./partials/footer') %>
+      <%- include('./partials/footer') %>
   </body>
+
 </html>

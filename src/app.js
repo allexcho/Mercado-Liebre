@@ -6,12 +6,21 @@ const userRouter = require('./routes/userRouter');
 const methodOverride = require('method-override');
 const logs = require("./middleware/logs")
 const session = require("express-session")
+const cookie = require("cookie-parser")
+const cookieExiste = require("./middleware/cookieMiddleware")
 
 app.use(express.static('public'));
 
+app.use(cookie())
+
 app.use(express({
-    secret: "secret"
+    secret: "secret",
+    resave: false,
+    saveUninitalized: false
 }))
+
+app.use(cookieExiste)
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 

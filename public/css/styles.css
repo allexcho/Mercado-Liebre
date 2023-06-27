@@ -1,479 +1,479 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+header {
+  background-color: #eac926;
+  width: 100vw;
+}
+
+.top-header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+
+.logo {
+  width: 50%;
+  padding: 10px;
+}
+
+.buscador {
+  width: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.top-header p {
+  margin: auto;
+}
+
+header .buscador .input {
+  background-color: #ffff;
+  border: none;
+  border-radius: 3px;
+  color: #666;
+  width: 100%;
+  padding: 10px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-self: center;
+  text-justify: center;
+}
+
+header .buscador .lupa {
+  position: relative;
+  left: -27px;
+  background-color: white;
+  border: none;
+  padding-left: 5px;
+}
+
+header p {
+  text-align: center;
+}
+
+header nav ul li a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+}
+
+header nav i {
+  margin-left: 5px;
+}
+
+header nav ul li {
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+header nav ul {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 42%;
+}
+
+header div.burger-menu i {
+  color: #fff;
+  background-color: #1259c3;
+  font-size: 20px;
+  padding: 8px;
+  margin: 10px 0px 20px 0px;
+  border-radius: 5px;
+}
+
+header div.burger-menu {
+  text-align: center;
+}
+
+header nav {
+  padding-bottom: 10px;
+  display: none;
+}
+
+.banner-img {
+  width: 100vw;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+footer i {
+  font-size: 35px;
+  color: #1259c3;
+  margin-bottom: 10px;
+  transition: color 500ms;
+}
+
+footer div p {
+  max-width: 70vw;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer div h5 {
+  font-size: 16px;
+}
+
+main section h3 {
+  font-size: 24px;
+  color: #666;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+main section article .precios {
+  width: 30%;
+  font-size: 16px;
+}
+
+main section article .descuento {
+  width: 70%;
+  font-size: 14px;
+  color: #39b54a;
+}
+
+main section article {
+  margin-bottom: 10px;
+}
+
+main section div article img {
+  width: 100%;
+}
+
+.info-article {
+  border-top: solid 1px #ebebeb;
+  padding: 15px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.desc-prod {
+  display: none;
+  font-size: 16px;
+}
+
+#formulario-registro {
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+}
+
+.formularios {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.formularios div {
+  margin-bottom: 10px;
+  border-radius: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.formularios h3 {
+  margin-bottom: 10px;
+}
+
+.text-field {
+  width: 12rem;
+  padding: 5px;
+}
+
+.text-field:focus {
+  border: solid 3px #1259c3;
+  border-radius: 5px;
+  outline: none;
+}
+
+#nacimiento {
+  width: 12rem;
+  padding: 5px;
+}
+
+#nacimiento:focus {
+  border: solid 3px #1259c3;
+  border-radius: 5px;
+  outline: none;
+}
+
+.selecciones {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.foto-perfil {
+  border: 1px solid #000000;
+  width: 12rem;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: white;
+  margin-bottom: 10px;
+  border: 1px solid #666;
+  border-radius: 3px;
+}
+
+.botonForm {
+  width: 50%;
+  margin: 5px;
+}
+
+.botonSubmit {
+  color: #fff;
+  background-color: #1259c3;
+  font-size: 14px;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.confirmar {
+  width: 100%;
+}
+
+.botonReset {
+  color: #fff;
+  background-color: red;
+  font-size: 14px;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.botonLogin {
+  width: 100%;
+  color: #fff;
+  background-color: #1259c3;
+  font-size: 14px;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+main section article i {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  color: #39b54a;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+  transition: all 0.3s;
+}
+
+@media (min-width: 361px) {
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-  
+
+  .desc-prod {
+    display: block;
+  }
+
+  .descuento {
+    text-align: right;
+  }
+
+  main section article {
+    width: 45%;
+  }
+
+  main section article img {
+    width: auto;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
   body {
-    font-family: "Roboto", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
   }
-  
-  header {
-    background-color: #eac926;
-    width: 100vw;
+
+  header nav ul li a {
+    font-size: 14px;
   }
-  
+
+  main section article .precios {
+    font-size: 18px;
+  }
+
+  main section article .descuento {
+    font-size: 16px;
+  }
+
+  .desc-prod {
+    font-size: 18px;
+  }
+
+  .productos article {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  main section article {
+    width: 22.5%;
+  }
+
   .top-header {
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
+    align-items: center;
+    justify-content: space-around;
   }
-  
+
   .logo {
-    width: 50%;
+    width: 33%;
     padding: 10px;
+    margin-right: 4%;
   }
-  
+
   .buscador {
-    width: 50%;
+    width: 33%;
     padding: 5px;
     display: flex;
     align-items: center;
   }
-  
+
   .top-header p {
-    margin: auto;
+    width: 30%;
   }
-  
-  header .buscador .input {
-    background-color: #ffff;
-    border: none;
-    border-radius: 3px;
-    color: #666;
-    width: 100%;
-    padding: 10px 5px;
-    white-space: nowrap;
+
+  .desc-prod {
+    transition: all 1s;
+    max-height: 0px;
+    transition: max-height 0.3s;
     overflow: hidden;
-    text-overflow: ellipsis;
-    align-self: center;
-    text-justify: center;
-  }
-  
-  header .buscador .lupa {
-    position: relative;
-    left: -27px;
-    background-color: white;
-    border: none;
-    padding-left: 5px;
-  }
-  
-  header p {
-    text-align: center;
-  }
-  
-  header nav ul li a {
-    font-size: 12px;
-    text-decoration: none;
-    color: #000;
-  }
-  
-  header nav i {
-    margin-left: 5px;
-  }
-  
-  header nav ul li {
-    list-style-type: none;
-    justify-content: space-between;
-  }
-  
-  header nav ul {
-    margin-bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    width: 42%;
-  }
-  
-  header div.burger-menu i {
-    color: #fff;
-    background-color: #1259c3;
-    font-size: 20px;
-    padding: 8px;
-    margin: 10px 0px 20px 0px;
-    border-radius: 5px;
-  }
-  
-  header div.burger-menu {
-    text-align: center;
-  }
-  
-  header nav {
-    padding-bottom: 10px;
-    display: none;
   }
 
-  .banner-img {
-    width: 100vw;
+  article:hover .desc-prod {
+    max-height: 100px;
   }
-  
+
+  article:hover i {
+    transform: rotate(-90deg);
+  }
+
+  article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  .botonLogin:hover {
+    background-color: #0022aa;
+  }
+
+  .botonForm:hover {
+    background-color: #0022aa;
+  }
+
+  .botonReset:hover {
+    background-color: rgb(136, 1, 1);
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  footer i:hover {
+    color: #4682B4;
+  }
+
   footer div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-  }
-  
-  footer i {
-    font-size: 35px;
-    color: #1259c3;
-    margin-bottom: 10px;
-    transition: color 500ms;
-  }
-
-  footer div p {
-    max-width: 70vw;
-    text-align: center;
-    font-size: 12px;
+    margin-bottom: 20px;
+    width: 30vw;
   }
 
   footer div h5 {
-    font-size: 16px;
+    font-size: 17px;
   }
 
-  main section h3 {
-    font-size: 24px;
-    color: #666;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    text-align: left;
+  .top-header {
+    padding-bottom: 25px;
+    padding-top: 25px;
   }
-  
-  main section article .precios {
-    width: 30%;
-    font-size: 16px;
-  }
-  
-  main section article .descuento {
-    width: 70%;
-    font-size: 14px;
-    color: #39b54a;
-  }
-  
-  main section article {
-    margin-bottom: 10px;
-  }
-  
-  main section div article img {
-    width: 100%;
-  }
-  
-  .info-article {
-    border-top: solid 1px #ebebeb;
-    padding: 15px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  
-  .desc-prod {
-    display: none;
-    font-size: 16px;
-  }
-  
-  #formulario-registro {
-    background-color: #ebebeb;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .formularios {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 25px;
-  }
-  
-  .formularios div {
-    margin-bottom: 10px;
-    border-radius: 30%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .formularios h3 {
-    margin-bottom: 10px;
-  }
-  
+
   .text-field {
-    width: 12rem;
-    padding: 5px;
-  }
-  
-  .text-field:focus {
-    border: solid 3px #1259c3;
-    border-radius: 5px;
-    outline: none;
-  }
-  
-  #nacimiento {
-    width: 12rem;
-    padding: 5px;
-  }
-  
-  #nacimiento:focus {
-    border: solid 3px #1259c3;
-    border-radius: 5px;
-    outline: none;
-  }
-  
-  .selecciones {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  input[type="file"] {
-    display: none;
-  }
-  
-  .foto-perfil {
-    border: 1px solid #000000;
-    width: 12rem;
-    padding: 6px 12px;
-    cursor: pointer;
-    background-color: white;
-    margin-bottom: 10px;
-    border: 1px solid #666;
-    border-radius: 3px;
-  }
-  
-  .botonForm {
-    width: 50%;
-    margin: 5px;
-  }
-  
-  .botonSubmit {
-    color: #fff;
-    background-color: #1259c3;
-    font-size: 14px;
-    border: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;
-    transition: all 0.3s;
-  }
-  
-  .confirmar {
-    width: 100%;
-  }
-  
-  .botonReset {
-    color: #fff;
-    background-color: red;
-    font-size: 14px;
-    border: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;
-    transition: all 0.3s;
-  }
-  
-  .botonLogin {
-    width: 100%;
-    color: #fff;
-    background-color: #1259c3;
-    font-size: 14px;
-    border: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;
-    transition: all 0.3s;
-  }
-  
-  main section article i {
-    display: block;
+    width: 16rem;
     font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    color: #39b54a;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-    transition: all 0.3s;
   }
-  
-  @media (min-width: 361px) {
-    .productos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-  
-    .desc-prod {
-      display: block;
-    }
-  
-    .descuento {
-      text-align: right;
-    }
-  
-    main section article {
-      width: 45%;
-    }
-  
-    main section article img {
-      width: auto;
-    }
-  
-    header nav {
-      display: flex;
-      justify-content: space-around;
-    }
-  
-    .burger-menu {
-      display: none;
-    }
-  }
-  
-  @media (min-width: 769px) {
-    body {
-      font-size: 14px;
-    }
-  
-    header nav ul li a {
-      font-size: 14px;
-    }
-  
-    main section article .precios {
-      font-size: 18px;
-    }
-  
-    main section article .descuento {
-      font-size: 16px;
-    }
-  
-    .desc-prod {
-      font-size: 18px;
-    }
 
-    .productos article {
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-  
-    main section article {
-      width: 22.5%;
-    }
-  
-    .top-header {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 5%;
-      align-items: center;
-      justify-content: space-around;
-    }
-  
-    .logo {
-      width: 33%;
-      padding: 10px;
-      margin-right: 4%;
-    }
-  
-    .buscador {
-      width: 33%;
-      padding: 5px;
-      display: flex;
-      align-items: center;
-    }
-  
-    .top-header p {
-      width: 30%;
-    }
-  
-    .desc-prod {
-      transition: all 1s;
-      max-height: 0px;
-      transition: max-height 0.3s;
-      overflow: hidden;
-    }
-  
-    article:hover .desc-prod {
-      max-height: 100px;
-    }
-  
-    article:hover i {
-      transform: rotate(-90deg);
-    }
-  
-    article:hover {
-      box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-  
-    .botonLogin:hover {
-      background-color: #0022aa;
-    }
-  
-    .botonForm:hover {
-      background-color: #0022aa;
-    }
-  
-    .botonReset:hover {
-      background-color: rgb(136, 1, 1);
-    }
-  
-    footer {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-    }
-  
-    footer i:hover {
-      color: #4682B4;
-    }
-  
-    footer div {
-      margin-bottom: 20px;
-      width: 30vw;
-    }
-  
-    footer div h5 {
-      font-size: 17px;
-    }
-  
-    .top-header {
-      padding-bottom: 25px;
-      padding-top: 25px;
-    }
-  
-    .text-field {
-      width: 16rem;
-      font-size: 16px;
-    }
-  
-    #nacimiento {
-      width: 16rem;
-      font-size: 16px;
-    }
-  
-    .foto-perfil {
-      width: 16rem;
-      font-size: 16px;
-    }
-  
-    .formularios div {
-      width: 17rem;
-      font-size: 14px;
-      justify-content: space-evenly;
-    }
-  
-    .selecciones {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  
-    .selecciones div {
-      width: 80px;
-      justify-content: center;
-    }
-  
-    .botonForm {
-      font-size: 18px;
-    }
+  #nacimiento {
+    width: 16rem;
+    font-size: 16px;
   }
+
+  .foto-perfil {
+    width: 16rem;
+    font-size: 16px;
+  }
+
+  .formularios div {
+    width: 17rem;
+    font-size: 14px;
+    justify-content: space-evenly;
+  }
+
+  .selecciones {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .selecciones div {
+    width: 80px;
+    justify-content: center;
+  }
+
+  .botonForm {
+    font-size: 18px;
+  }
+}
