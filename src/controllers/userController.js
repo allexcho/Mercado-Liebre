@@ -4,6 +4,7 @@ const path = require("path")
 const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/user.json")));
 
 const { validationResult } = require("express-validator");
+const bcrypt = require("bcrypt")
 
 const userController = {
     login: (req, res) => {
@@ -12,7 +13,7 @@ const userController = {
     processLogin: (req, res) => {
         const usuario = datos.find((row) => row.email == req.body.email);
         if (usuario) {
-            if (usuario.password == req, body.password) {
+            if(bcrypt.compareSync(req.body.password, usuario.password)) {
                 delete usuario.password
                 req.session.usuarioLogueado = usuario
                 if (req.body.cookie) {
@@ -52,12 +53,12 @@ const userController = {
             "tipoDePerfil": req.body.perfil,
             "intereses": req.body.interes,
             "image": req.body.Fotoperfil,
-            "password": req.body.password
+            "password": bcrypt.hashSync(req.body.password, 10)
         }
 
         const rdoValidation = validationResult(req)
         console.log(rdoValidation.errorss);
-        if (rdoValidation.errorss.length > 0) {
+        if (rdoValidation.errors.length > 0) {
             return res.render("register", { errorss: rdoValidation.mapped(), oldData: req.body })
         }
 

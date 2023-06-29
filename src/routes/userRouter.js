@@ -25,7 +25,7 @@ const fileUpload = multer({
 router.get('/login', userController.login);
 router.post("login", userController.processLogin);
 router.get('/register', userController.register);
-router.post('/register', registerValidation, userController.processRegister)
+router.post('/register',  userController.processRegister)
 
 // Edicion de usuario 
 router.get('/editar/:id', userController.editar);

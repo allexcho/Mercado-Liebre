@@ -34,5 +34,17 @@
     "intereses": "Moda",
     "image": "",
     "password": "1234"
+  },
+  {
+    "id": 4,
+    "name": "juanma",
+    "username": "jugandoCOD",
+    "fechaDeNacimiento": "2023-06-28",
+    "email": "juanmajugandoalCODenclase@gmail.com",
+    "domicilio": "COD 28",
+    "tipoDePerfil": "Comprador",
+    "intereses": "jugueteria",
+    "image": "",
+    "password": "$2b$10$ZaxaijoksyXnbS.MOnQriudLeQp1/lXxPIPupXv8njmmUYgm0p6NK"
   }
 ]
